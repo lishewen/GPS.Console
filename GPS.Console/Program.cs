@@ -1,7 +1,9 @@
 ﻿using System.IO.Ports;
-using System.Text.RegularExpressions;
-
+#if DEBUG
 const string PortName = "COM4";
+#else
+const string PortName = "/dev/ttyUSB0";
+#endif
 string utctime = "";
 string lat = "";
 string ulat = "";
